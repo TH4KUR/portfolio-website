@@ -1,16 +1,111 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply transition-all px-3 py-1 rounded-md text-2xl font-light;
+  text-shadow: rgb(0 0 0 / 73%) 3px 2px 7px;
+}
+.btn:hover {
+  text-shadow: rgb(0 0 0 / 73%) 4px 2px 6px;
+}
+/* ////////////////////////////////////////////////////////////////////// */
+/* HERO SECTION */
+
+.hero {
+  @apply grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  min-height: calc(100vh - 4rem);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* Mini Heading */
+
+.heading {
+  @apply flex items-center justify-items-center text-hero font-thin after:ml-4 after:w-12 leading-8 mb-3;
+  font-size: 1.35rem;
+}
+.heading::after {
+  content: '';
+  height: 1.25px;
+  @apply bg-hero;
+}
+.heading--big {
+  font-size: 2.75rem;
 }
 
-* {
-  box-sizing: border-box;
+/* ////////////////////////////////////////////////////////////////////// */
+/* Technologies Section */
+.language {
+  @apply flex flex-col items-center relative pt-2;
+}
+.language p {
+  @apply text-gray-300 text-lg;
+}
+.tag {
+  @apply absolute top-2 right-5 not-italic py-[2px] px-[2px] leading-none z-10 rounded-lg transform rotate-[15deg] select-none justify-self-end;
+}
+.react {
+  animation: rotate cubic-bezier(0.47, -1.49, 0, 2.63) 5s infinite;
+}
+/* Animations */
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fade {
+  display: block;
+  animation: fade 10s ease infinite;
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0;
+    display: none;
+    transform: translateY(1.5rem);
+  }
+  75% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-counter {
+  animation: fade-2 10s ease infinite;
+  position: absolute;
+  bottom: 0;
+}
+@keyframes fade-2 {
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  25% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
 }
