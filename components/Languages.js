@@ -49,16 +49,9 @@ export const Languages = ({ input }) => {
 };
 
 export const Frameworks = () => {
-  const [text, setText] = useState([
-    'MongoDB',
-    'Express.js',
-    'React',
-    'Node.js',
-  ]);
-  const textCopy = ['MongoDB', 'Express.js', 'React', 'Node.js'];
   return (
     <div className="grid grid-cols-6 grid-rows-2 place-content-center">
-      <div className={'language border-l border-t border-b border-sky-500'}>
+      <div className={'language'}>
         <Tag
           text={'Gaining XP'}
           bg={'bg-orange-500 text-dark-5 font-semibold'}
@@ -68,7 +61,7 @@ export const Frameworks = () => {
         <p className="fade">MongoDB</p>
         <p className="fade-counter">M</p>
       </div>
-      <div className={'language border-t border-b border-sky-500'}>
+      <div className={'language'}>
         <Tag
           text={'Gaining XP'}
           bg={'bg-orange-500 text-dark-5 font-semibold'}
@@ -78,7 +71,7 @@ export const Frameworks = () => {
         <p className="fade">Express.js</p>
         <p className="fade-counter">E</p>
       </div>
-      <div className={'language border-t border-b border-sky-500'}>
+      <div className={'language'}>
         <Tag
           text={'Beginner'}
           bg={'bg-blue-900 text-gray-100'}
@@ -88,7 +81,7 @@ export const Frameworks = () => {
         <p className="fade">React</p>
         <p className="fade-counter">R</p>
       </div>
-      <div className={'language border-r border-t border-b border-sky-500'}>
+      <div className={'language'}>
         <Tag
           text={'Gaining XP'}
           bg={'bg-orange-500 text-dark-5 font-semibold'}

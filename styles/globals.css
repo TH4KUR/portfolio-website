@@ -57,7 +57,7 @@
 
 .fade {
   display: block;
-  animation: fade 10s ease infinite;
+  animation: fade 12s ease infinite;
 }
 @keyframes fade {
   0% {
@@ -83,7 +83,7 @@
   }
 }
 .fade-counter {
-  animation: fade-2 10s ease infinite;
+  animation: fade-2 12s ease infinite;
   position: absolute;
   bottom: 0;
 }
