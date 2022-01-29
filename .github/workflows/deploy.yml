@@ -31,14 +31,13 @@ jobs:
         run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /portfolio-website
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
       - run: touch ./out/.nojekyll
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.5.9
+        uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
           ACCESS_TOKEN: ${{ secrets.ROUTE }}
           REPOSITORY_NAME: TH4KUR/TH4KUR.github.io
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
+          BRANCH: master # The branch the action should deploy to.
           FOLDER: out # The folder the action should deploy.
