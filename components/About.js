@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
+
 import Faq from './Faq';
 import Heading from './Heading';
 import HeadingContainer from './HeadingContainer';
@@ -12,9 +12,9 @@ const About = () => {
           small={'About Me'}
           big={
             <>
-              You can't use up creativity <br /> The more you use the more you{' '}
+              You can't use up creativity <br /> The more you use the more you
               <br />
-              have left in your significant mind. asd
+              have left in your significant mind.
             </>
           }
           des={

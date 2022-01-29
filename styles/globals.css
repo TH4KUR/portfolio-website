@@ -26,7 +26,7 @@
 }
 .heading::after {
   content: '';
-  height: 1.25px;
+  height: 1px;
   @apply bg-hero;
 }
 .heading--big {
@@ -39,10 +39,10 @@
   @apply flex flex-col items-center relative pt-2;
 }
 .language p {
-  @apply text-gray-300 text-lg;
+  @apply text-gray-300 text-lg z-[0.5];
 }
 .tag {
-  @apply absolute top-2 right-5 not-italic py-[2px] px-[2px] leading-none z-10 rounded-lg transform rotate-[15deg] select-none justify-self-end;
+  @apply absolute top-2 right-5 not-italic py-[2px] px-[2px] leading-none z-[1] rounded-lg transform rotate-[15deg] select-none justify-self-end;
 }
 .react {
   animation: rotate cubic-bezier(0.47, -1.49, 0, 2.63) 5s infinite;

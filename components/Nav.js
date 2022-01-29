@@ -5,14 +5,14 @@ import LinkStyled from './LinkStyled';
 const nav = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services' },
+  { name: 'Projects', href: '/projects' },
   { name: 'Contact', href: '/contact' },
 ];
 
 export default function Nav() {
   return (
-    <nav className="bg-dark text-2xl font-light leading-none">
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <nav className="fixed inset-x-0 top-0 container mx-auto z-[2]">
+      <div className="bg-dark text-2xl font-light leading-none px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between justify-items-stretch h-16">
           <Link href={'/'}>
             <a>

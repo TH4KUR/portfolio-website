@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Button = ({ text, color, hover, bg }) => {
   return (
     <button
