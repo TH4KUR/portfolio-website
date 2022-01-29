@@ -19,11 +19,11 @@ const Technologies = () => {
         </div>
         <div>
           <div className="mb-2">
-            <Heading text={'Languages'} />
+            <Heading text={'Languages'} big={false} />
             <Languages />
           </div>
           <div className="mb-2">
-            <Heading text={'Frameworks'} />
+            <Heading text={'Frameworks'} big={false} />
             <Frameworks />
           </div>
         </div>

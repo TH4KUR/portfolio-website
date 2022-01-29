@@ -31,7 +31,7 @@ const About = () => {
         <div>
           <div>
             <div className="mx-auto w-10/12">
-              <Heading text={'FAQs'} />
+              <Heading text={'FAQs'} big={false} />
             </div>
             <Heading
               text={
