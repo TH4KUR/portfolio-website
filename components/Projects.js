@@ -30,7 +30,7 @@ const Projects = () => {
             />
           </div>
         </HeadingContainer>
-        <div className="grid grid-cols-3 grid-rows-2 h-5/6">
+        <div className="grid grid-cols-3 grid-rows-2">
           <Card />
         </div>
       </div>

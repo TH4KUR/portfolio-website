@@ -21,8 +21,7 @@
 /* Mini Heading */
 
 .heading {
-  @apply flex items-center justify-items-center text-hero font-thin after:ml-4 after:w-12 leading-8 mb-3;
-  font-size: 1.35rem;
+  @apply flex items-center justify-items-center text-hero font-thin after:ml-4 after:w-12 mb-3 text-[1.4rem];
 }
 .heading::after {
   content: '';
@@ -107,5 +106,57 @@
   100% {
     opacity: 0;
     transform: translateY(1.5rem);
+  }
+}
+
+/* Border Animation */
+.animate-border:before {
+  content: '';
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  top: calc(2px / -1);
+  left: calc(2px / -1);
+  background: linear-gradient(
+      to right,
+      rgb(219 39 119) 0%,
+      rgb(219 39 119) 100%
+    ),
+    linear-gradient(to top, rgb(219 39 119) 50%, transparent 50%),
+    linear-gradient(to top, rgb(219 39 119) 50%, transparent 50%),
+    linear-gradient(to right, rgb(219 39 119) 0%, rgb(219 39 119) 100%),
+    linear-gradient(to left, rgb(219 39 119) 0%, rgb(219 39 119) 100%);
+  background-size: 100% 1px, 1px 200%, 1px 200%, 0% 1px, 0% 1px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  transition: transform 0.3s ease-in, background-position 0.3s ease-in,
+    background-size 0.3s ease-in;
+  transform: scaleX(0) rotate(0deg);
+  transition-delay: 0.6s, 0.3s, 0s;
+}
+.animate-border:hover:before {
+  background-size: 200% 1px, 1px 400%, 1px 400%, 55% 1px, 55% 1px;
+  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  transform: scaleX(1) rotate(0deg);
+  transition-delay: 0s, 0.3s, 0.6s;
+}
+
+#__next::-webkit-scrollbar-thumb {
+  background-color: #ff542d;
+  border-radius: 16px;
+  border: 4px solid #fff;
+}
+
+.with-info:hover i {
+  display: block;
+  animation: fade-in 0.3s ease;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
