@@ -7,21 +7,7 @@ import { BsCheck2 } from 'react-icons/bs';
 import { BiLinkExternal } from 'react-icons/bi';
 import { CgSpinner } from 'react-icons/cg';
 import { DiGithubBadge } from 'react-icons/di';
-
-const requestConfig = { method: 'GET', mode: 'no-cors' };
-
-async function sendPing(resource, options = {}) {
-  const { timeout = 3000 } = options;
-
-  const controller = new AbortController();
-  const id = setTimeout(() => controller.abort(), timeout);
-  const response = await fetch(resource, {
-    ...options,
-    signal: controller.signal,
-  });
-  clearTimeout(id);
-  return response;
-}
+import sendPing from '../utils/sendPing';
 
 const Card = ({ data }) => {
   const { cardData, modalData, requestsData } = data;
@@ -39,7 +25,9 @@ const Card = ({ data }) => {
 
       if (!(reqStatus === 'done')) {
         e.preventDefault();
+
         setStatus('load', status || 'load');
+
         const response =
           stat === 'onfail'
             ? await sendPing(url, { timeout: 15000 })
@@ -67,15 +55,14 @@ const Card = ({ data }) => {
   const openModal = () => {
     setIsOpen(true);
   };
-
   return (
     <>
       <div
         onClick={openModal}
-        className="animate-border relative py-4 px-3 rounded bg-dark-4 h-full grid grid-rows-2 cursor-pointer"
+        className="animate-border relative py-4 px-3 rounded bg-dark-4 h-full grid grid-rows-2 cursor-pointer gap-2 items-start"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={cardData.imageSrc} alt="Project Picture" />
+        <div className={`${cardData.imageSrc} bg-cover h-full w-full`}></div>
         <div className="flex flex-col justify-center">
           <div>
             <h5 className="text-gray-200 text-2xl">{cardData.title}</h5>

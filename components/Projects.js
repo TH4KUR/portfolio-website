@@ -14,7 +14,7 @@ import {
 const allData = [
   {
     cardData: {
-      imageSrc: '/siis.png',
+      imageSrc: `bg-[url('/siis.png')]`,
       title: 'SiiS Website',
       shortDes:
         'I made this static website for an IT solutions provider company called SiiS. I used this project as a way to get a good grasp on tailwindcss.',
@@ -39,18 +39,19 @@ const allData = [
   },
   {
     cardData: {
-      imageSrc: '/brilliance.png',
+      imageSrc: `bg-[url('/brilliance.jpeg')]`,
       title: 'Brilliance App',
       shortDes:
-        'I made this app as a entry for my first hackathon. This app helps students to track their progress throughout their session and compare it with their friends to compete with them and many more. I have two github branches the hackathon original and af ',
+        'I made this app as a entry for my first hackathon. This app helps students to track their progress throughout their session and compare it with their friends and many more.',
     },
     modalData: {
       title: 'Brilliance App',
-      des: 'I made this app as a entry for my first hackathon. This app helps students to track their progress throughout their session and compare it with their friends to compete with them and many more. I have two github branches the hackathon original and af  I also did some basic SEO.',
+      des: 'I made this app as a entry for my first hackathon. This app helps students to track their progress throughout their session and compare it with their friends to compete with them and many more. I have two github branches the hackathon original and the recently updated one. ',
       languages: [
-        <SiHtml5 key={1} className="text-orange-600 text-[1.8rem] mr-2" />,
-        <SiTailwindcss key={2} className=" text-cyan-400 text-3xl mr-2" />,
-        <DiJavascript1 key={3} className=" text-yellow-400 text-3xl" />,
+        <SiHtml5 key={1} className="text-orange-600 text-[1.7rem] mr-2" />,
+        <DiJavascript1 key={2} className=" text-yellow-400 text-3xl mr-2" />,
+        <DiNodejsSmall key={3} className=" text-green-400 text-3xl mr-2" />,
+        <SiMongodb key={4} className=" text-green-500 text-3xl" />,
       ],
     },
     requestsData: {
@@ -72,7 +73,7 @@ const allData = [
     },
     modalData: {
       title: 'SiiS Website',
-      des: 'I made this static website for an IT solutions provider company called SiiS. I used this project as a way to get a good grasp on tailwindcss. I also did some basic SEO.',
+      des: 'I made this static website for an IT solutions provider company called SiiS. I used this project as a way to get a good grasp on tailwindcss.',
       languages: [
         <SiHtml5 key={1} className="text-orange-600 text-[1.8rem] mr-2" />,
         <SiTailwindcss key={2} className=" text-cyan-400 text-3xl mr-2" />,
