@@ -1,4 +1,4 @@
-const Heading = ({ children, text, big, c }) => {
+const Heading = ({ children, text, big, c = '' }) => {
   const s = typeof c === 'object' ? c : {};
   return !big ? (
     <h2 className={`heading ${s ? '' : c}`} style={s}>

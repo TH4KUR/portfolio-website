@@ -1,6 +1,148 @@
 import Card from './Card';
 import HeadingContainer from './HeadingContainer';
 import LinkStyled from './LinkStyled';
+import { DiJavascript1, DiNodejsSmall, DiSass, DiReact } from 'react-icons/di';
+import {
+  SiHtml5,
+  SiCss3,
+  SiNextdotjs,
+  SiExpress,
+  SiMongodb,
+  SiTailwindcss,
+} from 'react-icons/si';
+
+const allData = [
+  {
+    cardData: {
+      imageSrc: '/siis.png',
+      title: 'SiiS Website',
+      shortDes:
+        'I made this static website for an IT solutions provider company called SiiS. I used this project as a way to get a good grasp on tailwindcss.',
+    },
+    modalData: {
+      title: 'SiiS Website',
+      des: 'I made this static website for an IT solutions provider company called SiiS. I used this project as a way to get a good grasp on tailwindcss. I also did some basic SEO.',
+      languages: [
+        <SiHtml5 key={1} className="text-orange-600 text-[1.8rem] mr-2" />,
+        <SiTailwindcss key={2} className=" text-cyan-400 text-3xl mr-2" />,
+        <DiJavascript1 key={3} className=" text-yellow-400 text-3xl" />,
+      ],
+    },
+    // http://fast-shore-10116.herokuapp.com/allusers
+    requestsData: {
+      finalUrl: 'https://www.siis.in/',
+      url: 'https://proxy.eashaan.workers.dev/?url=http://www.siis.in',
+      load: 'Checking website status',
+      success: 'Website is online',
+      done: 'Visit Website',
+    },
+  },
+  {
+    cardData: {
+      imageSrc: '/brilliance.png',
+      title: 'Brilliance App',
+      shortDes:
+        'I made this app as a entry for my first hackathon. This app helps students to track their progress throughout their session and compare it with their friends to compete with them and many more. I have two github branches the hackathon original and af ',
+    },
+    modalData: {
+      title: 'Brilliance App',
+      des: 'I made this app as a entry for my first hackathon. This app helps students to track their progress throughout their session and compare it with their friends to compete with them and many more. I have two github branches the hackathon original and af  I also did some basic SEO.',
+      languages: [
+        <SiHtml5 key={1} className="text-orange-600 text-[1.8rem] mr-2" />,
+        <SiTailwindcss key={2} className=" text-cyan-400 text-3xl mr-2" />,
+        <DiJavascript1 key={3} className=" text-yellow-400 text-3xl" />,
+      ],
+    },
+    requestsData: {
+      finalUrl: 'https://fast-shore-10116.herokuapp.com/',
+      url: 'https://proxy.eashaan.workers.dev/?url=https://fast-shore-10116.herokuapp.com/allusers',
+      load: 'Checking website status',
+      success: 'Website is online',
+      fail: 'Website is offline',
+      onfail: 'Giving the app a caffene shot',
+      done: 'Visit Website',
+    },
+  },
+  {
+    cardData: {
+      imageSrc: '/image.png',
+      title: 'SiiS Website',
+      shortDes:
+        'I made this static website for an IT solutions provider company called SiiS. I used this project as a way to get a good grasp on tailwindcss.',
+    },
+    modalData: {
+      title: 'SiiS Website',
+      des: 'I made this static website for an IT solutions provider company called SiiS. I used this project as a way to get a good grasp on tailwindcss. I also did some basic SEO.',
+      languages: [
+        <SiHtml5 key={1} className="text-orange-600 text-[1.8rem] mr-2" />,
+        <SiTailwindcss key={2} className=" text-cyan-400 text-3xl mr-2" />,
+        <DiJavascript1 key={3} className=" text-yellow-400 text-3xl" />,
+      ],
+    },
+    requestsData: {
+      finalUrl: 'https://www.siis.in/',
+      url: 'https://api.github.com/',
+      load: 'Checking website status',
+      success: 'Website is online',
+      fail: 'Website is offline',
+      onfail: 'Giving the app a caffene shot',
+      done: 'Visit Website',
+    },
+  },
+  {
+    cardData: {
+      imageSrc: '/image.png',
+      title: 'SiiS Website',
+      shortDes:
+        'I made this static website for an IT solutions provider company called SiiS. I used this project as a way to get a good grasp on tailwindcss.',
+    },
+    modalData: {
+      title: 'SiiS Website',
+      des: 'I made this static website for an IT solutions provider company called SiiS. I used this project as a way to get a good grasp on tailwindcss. I also did some basic SEO.',
+      languages: [
+        <SiHtml5 key={1} className="text-orange-600 text-[1.8rem] mr-2" />,
+        <SiTailwindcss key={2} className=" text-cyan-400 text-3xl mr-2" />,
+        <DiJavascript1 key={3} className=" text-yellow-400 text-3xl" />,
+      ],
+    },
+    requestsData: {
+      finalUrl: 'https://www.siis.in/',
+      url: 'https://api.github.com/',
+      load: 'Checking website status',
+      success: 'Website is online',
+      fail: 'Website is offline',
+      onfail: 'Giving the app a caffene shot',
+      done: 'Visit Website',
+    },
+  },
+  {
+    cardData: {
+      imageSrc: '/image.png',
+      title: 'SiiS Website',
+      shortDes:
+        'I made this static website for an IT solutions provider company called SiiS. I used this project as a way to get a good grasp on tailwindcss.',
+    },
+    modalData: {
+      title: 'SiiS Website',
+      des: 'I made this static website for an IT solutions provider company called SiiS. I used this project as a way to get a good grasp on tailwindcss. I also did some basic SEO.',
+      languages: [
+        <SiHtml5 key={1} className="text-orange-600 text-[1.8rem] mr-2" />,
+        <SiTailwindcss key={2} className=" text-cyan-400 text-3xl mr-2" />,
+        <DiJavascript1 key={3} className=" text-yellow-400 text-3xl" />,
+      ],
+    },
+    requestsData: {
+      finalUrl: 'https://www.siis.in/',
+      url: 'https://api.github.com/',
+      load: 'Checking website status',
+      success: 'Website is online',
+      fail: 'Website is offline',
+      onfail: 'Giving the app a caffene shot',
+      done: 'Visit Website',
+    },
+  },
+];
+
 const Projects = () => {
   return (
     <section className="w-full min-h-[90vh] bg-dark-5 grid">
@@ -30,8 +172,10 @@ const Projects = () => {
             />
           </div>
         </HeadingContainer>
-        <div className="grid grid-cols-3 grid-rows-2">
-          <Card />
+        <div className="grid grid-cols-3 grid-rows-2 gap-3">
+          {allData.map((el, i) => (
+            <Card key={i} data={el} />
+          ))}
         </div>
       </div>
     </section>

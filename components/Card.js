@@ -6,29 +6,10 @@ import { FaTimes } from 'react-icons/fa';
 import { BsCheck2 } from 'react-icons/bs';
 import { BiLinkExternal } from 'react-icons/bi';
 import { CgSpinner } from 'react-icons/cg';
-import {
-  DiJavascript1,
-  DiNodejsSmall,
-  DiSass,
-  DiReact,
-  DiGithubBadge,
-} from 'react-icons/di';
-import {
-  SiHtml5,
-  SiCss3,
-  SiNextdotjs,
-  SiExpress,
-  SiMongodb,
-  SiTailwindcss,
-} from 'react-icons/si';
-import ENCRYPTED_KEY from '../apiKey';
-const API_KEY = [...ENCRYPTED_KEY]
-  .map((c) => String.fromCharCode(c.charCodeAt(0) ^ 76))
-  .join('');
+import { DiGithubBadge } from 'react-icons/di';
 
 const requestConfig = { method: 'GET', mode: 'no-cors' };
 
-// Server Status check on click
 async function sendPing(resource, options = {}) {
   const { timeout = 3000 } = options;
 
@@ -42,44 +23,42 @@ async function sendPing(resource, options = {}) {
   return response;
 }
 
-const Card = () => {
-  const requestsData = {
-    url: 'url',
-    load: 'Checking website status',
-    success: 'Website is online',
-    fail: 'Website is offline',
-    done: 'Visit Website',
-    onfail: 'Giving the app a caffene shot',
-  };
+const Card = ({ data }) => {
+  const { cardData, modalData, requestsData } = data;
   const [reqStatus, setReqStatus] = useState(false);
   const [buttonText, setButtonText] = useState('Check Demo Status');
-  const setStatus = (stat) => {
+  let [isOpen, setIsOpen] = useState(false);
+
+  const setStatus = (stat, msg = '') => {
     setReqStatus(stat);
-    setButtonText(requestsData[stat]);
+    setButtonText(requestsData[msg] || requestsData[stat]);
   };
-  const clickHandler = async (e) => {
+  const clickHandler = async (e, url, stat) => {
     try {
+      let status = stat ? stat : null;
+
       if (!(reqStatus === 'done')) {
         e.preventDefault();
-        setStatus('load');
+        setStatus('load', status || 'load');
+        const response =
+          stat === 'onfail'
+            ? await sendPing(url, { timeout: 15000 })
+            : await sendPing(url);
 
-        const response = await sendPing(
-          'https://forkify.com/api/v2/recipes?search=pizza&key=99c2d18e-b9b2-4c0c-9260-3db5685e42f4'
-        );
         if (response.ok) {
-          setTimeout(setStatus('done'), 500);
+          setStatus('success', stat || 'success');
+          setTimeout(() => setStatus('done'), 500);
         }
-        console.log(response);
       } else {
         return;
       }
     } catch (error) {
       setStatus('fail');
-      setTimeout(() => {});
-      console.log(error);
+      setTimeout(() => {
+        clickHandler(e, url, 'onfail');
+      }, 500);
     }
   };
-  let [isOpen, setIsOpen] = useState(true);
 
   const closeModal = () => {
     setIsOpen(false);
@@ -88,19 +67,20 @@ const Card = () => {
   const openModal = () => {
     setIsOpen(true);
   };
+
   return (
     <>
       <div
         onClick={openModal}
         className="animate-border relative py-4 px-3 rounded bg-dark-4 h-full grid grid-rows-2 cursor-pointer"
       >
-        <img src="/image.png" alt="Project Picture" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={cardData.imageSrc} alt="Project Picture" />
         <div className="flex flex-col justify-center">
           <div>
-            <h5 className="text-gray-200 text-2xl">SiiS Homepage</h5>
+            <h5 className="text-gray-200 text-2xl">{cardData.title}</h5>
             <p className="text-gray-400 text-xl leading-none">
-              A completely static web-page for a IT solutions company called
-              SiiS. Also did some basic SEO for Google, and other social media.
+              {cardData.shortDes}
             </p>
           </div>
         </div>
@@ -146,12 +126,10 @@ const Card = () => {
                     as="h3"
                     className="text-3xl font-medium leading-6 text-gray-200 mb-1"
                   >
-                    SiiS Website
+                    {modalData.title}
                   </Dialog.Title>
                   <p className="text-2xl text-gray-400 leading-none">
-                    A completely static web-page for a IT solutions company
-                    called SiiS. Also did some basic SEO for Google, and other
-                    social media.
+                    {modalData.des}
                   </p>
                 </div>
                 <FaTimes
@@ -164,11 +142,7 @@ const Card = () => {
                     big={false}
                     c={{ marginBottom: 0 }}
                   />
-                  <div className="flex mt-1">
-                    <SiHtml5 className="text-orange-600 text-[1.8rem] mr-2" />
-                    <SiTailwindcss className=" text-cyan-400 text-3xl mr-2" />
-                    <DiJavascript1 className=" text-yellow-400 text-3xl" />
-                  </div>
+                  <div className="flex mt-1">{[...modalData.languages]}</div>
                   <div className="mt-4">
                     <Heading
                       text={'Links'}
@@ -183,8 +157,12 @@ const Card = () => {
                           'text-pink-600'
                         } text-xl bg-dark-4 rounded mr-2 flex items-center`}
                         style={{ textShadow: '1px 2px 6px #000000e1' }}
-                        onClick={clickHandler}
-                        href={reqStatus === 'done' ? 'https://google.com' : '#'}
+                        onClick={(e) => {
+                          clickHandler(e, requestsData.url);
+                        }}
+                        href={
+                          reqStatus === 'done' ? requestsData.finalUrl : '#'
+                        }
                         target="_blank"
                         rel="noreferrer"
                       >
