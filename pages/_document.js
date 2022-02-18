@@ -21,7 +21,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body className="font-display pt-16 bg-dark container mx-auto w-full">
+        <body className="font-display pt-16 bg-dark container mx-auto w-full selection:bg-pink-600 selection:text-gray-900">
           <Main />
           <NextScript />
         </body>
