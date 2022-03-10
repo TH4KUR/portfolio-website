@@ -10,9 +10,13 @@ import {
   SiMongodb,
   SiTailwindcss,
 } from 'react-icons/si';
+import { useState } from 'react';
 
 const allData = [
   {
+    github: {
+      stat: false,
+    },
     cardData: {
       imageSrc: `bg-[url('/siis.png')]`,
       modalImg: `bg-[url('/siis-modal.png')]`,
@@ -38,6 +42,10 @@ const allData = [
     },
   },
   {
+    github: {
+      stat: true,
+      link: 'https://github.com/TH4KUR/brilliance',
+    },
     cardData: {
       imageSrc: `bg-[url('/brilliance.png')]`,
       modalImg: `bg-[url('/brilliance-modal.png')]`,
@@ -68,6 +76,13 @@ const allData = [
 ];
 
 const Projects = () => {
+  const [initial, setInitial] = useState(true);
+  const [text, setText] = useState(<>Load More &rarr;</>);
+  const testFunc = () => {
+    setInitial(false);
+    setText(<>No More projects to show for now...</>);
+    console.log(text, initial);
+  };
   return (
     <section className="w-full min-h-[86vh] bg-dark-5 grid">
       <div className="w-[86.3%] pt-40 mx-auto grid grid-cols-2">
@@ -85,15 +100,15 @@ const Projects = () => {
           }
         >
           <div className="flex">
-            <LinkStyled
-              text={
-                <p className="border-b border-current pb-0 leading-none">
-                  Load More &rarr;
-                </p>
-              }
-              href={'/'}
-              invert={true}
-            />
+            <button
+              className={`${
+                initial ? 'text-hero hover:text-gray-50' : 'text-gray-50'
+              } transition-colors text-2xl border-b border-current pb-0 leading-none cursor-pointer`}
+              onClick={testFunc}
+              disabled={initial}
+            >
+              {text}
+            </button>
           </div>
         </HeadingContainer>
         <div className="grid grid-cols-3 grid-rows-2 gap-3">

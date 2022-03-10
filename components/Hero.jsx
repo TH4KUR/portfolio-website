@@ -24,8 +24,8 @@ const Hero = () => {
           small={'Web Developer'}
           big={
             <>
-              Based in India <br />
-              I'm a student and Aspiring Web Developer
+              Hello I am <br />
+              Eashaan Thakur an aspiring web developer
             </>
           }
           links={[
@@ -34,7 +34,7 @@ const Hero = () => {
               href: 'mailto:max910payne@gmail.com',
             },
           ]}
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil molestias laboriosam illo adipisci, accusamus reiciendis eveniet voluptates sunt labore necessitatibus veritatis natus recusandae possimus, provident, cumque voluptate doloribus dolorem tempora?"
+          des="I am currently a high school student, learning new technologies in web development. I love building websites but I also play CTFs whenever i get the time. "
         />
       </div>
     </header>

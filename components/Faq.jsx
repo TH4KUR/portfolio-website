@@ -34,7 +34,9 @@ const Faq = () => {
                       <span>{question}</span>
                       <ChevronUpIcon
                         className={`${
-                          open ? 'transform rotate-180' : ''
+                          open
+                            ? 'transform rotate-180'
+                            : 'transform rotate-[270deg]'
                         } w-5 h-5 text-gray-300 self-center`}
                       />
                     </Disclosure.Button>

@@ -18,7 +18,7 @@ const About = () => {
             </>
           }
           des={
-            'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, eius? Aliquam nihil iste a consequuntur reprehenderit eligendi eos vero, obcaecati natus delectus? Earum possimus quo porro cumque quasi aperiam ab?'
+            'I believe creativity is really important in web development. Making creative and user friendly website truly makes me happy with my work. If you have any more questions about me please find the answers beside.'
           }
         >
           <div className="flex">

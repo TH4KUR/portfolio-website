@@ -10,7 +10,7 @@ import { DiGithubBadge } from 'react-icons/di';
 import sendPing from '../utils/sendPing';
 
 const Card = ({ data }) => {
-  const { cardData, modalData, requestsData } = data;
+  const { cardData, modalData, requestsData, github } = data;
   const [reqStatus, setReqStatus] = useState(false);
   const [buttonText, setButtonText] = useState('Check Demo Status');
   let [isOpen, setIsOpen] = useState(false);
@@ -106,15 +106,15 @@ const Card = ({ data }) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <div className="inline-block w-full max-w-md p-4 my-8 overflow-hidden text-left align-middle transition-all transform bg-dark-5 shadow-xl rounded-2xl relative">
+              <div className="inline-block w-full max-w-lg p-4 my-8 overflow-hidden text-left align-middle transition-all transform bg-dark-5 shadow-xl rounded-2xl relative">
                 <Heading text={'Project'} big={false} />
                 <div className="mt-2">
                   <div
-                    className={`${cardData.modalImg} bg-cover w-[80%] h-auto`}
+                    className={`${cardData.modalImg} bg-cover w-full h-[30vh] rounded`}
                   ></div>
                   <Dialog.Title
                     as="h3"
-                    className="text-3xl font-medium leading-6 text-gray-200 mb-1"
+                    className="text-3xl font-medium leading-6 text-gray-200 mb-1 mt-2"
                   >
                     {modalData.title}
                   </Dialog.Title>
@@ -145,7 +145,7 @@ const Card = ({ data }) => {
                           (reqStatus === 'success' && 'text-emerald-500') ||
                           (reqStatus === 'fail' && 'text-red-500') ||
                           'text-pink-600'
-                        } text-xl bg-dark-4 rounded mr-2 flex items-center`}
+                        } text-xl bg-dark-4 rounded mr-2 flex items-center focus:border-none`}
                         style={{ textShadow: '1px 2px 6px #000000e1' }}
                         onClick={(e) => {
                           clickHandler(e, requestsData.url);
@@ -153,7 +153,6 @@ const Card = ({ data }) => {
                         href={
                           reqStatus === 'done' ? requestsData.finalUrl : '#'
                         }
-                        onLoad={(e) => e.blur()}
                         target="_blank"
                         rel="noreferrer"
                       >
@@ -171,17 +170,22 @@ const Card = ({ data }) => {
                           ))}
                         {buttonText}
                       </a>
-                      <button
-                        className="py-1 px-2 text-pink-600 text-xl bg-dark-4 rounded flex items-center cursor-not-allowed relative with-info"
+                      <a
+                        href={github.stat && github.link}
+                        className={`py-1 px-2 text-pink-600 text-xl bg-dark-4 rounded flex items-center ${
+                          github.stat ? '' : 'cursor-not-allowed with-info'
+                        } relative`}
                         style={{ textShadow: '1px 2px 6px #000000e1' }}
                       >
                         <DiGithubBadge className="mr-1 leading-none text-xl transform -translate-y-[2px]" />
-                        Not Permitted
-                        <i className="bg-dark-5 text-gray-200 p-1 not-italic absolute w-[30ch] top-[-5rem] inset-x-0 hidden -translate-x-9 cursor-text">
+                        {github.stat ? 'Source Code' : 'Not Permitted'}
+                        <i
+                          className={`bg-dark-5 text-gray-200 p-1 not-italic absolute w-[30ch] top-[-5rem] inset-x-0 hidden -translate-x-9 cursor-text text-center`}
+                        >
                           Source code cant be publicly shared but code snippets
                           can be shared upon request
                         </i>
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
