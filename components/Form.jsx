@@ -1,6 +1,7 @@
 import React from 'react';
 import Heading from './Heading';
-
+import styles from '../styles/Form.module.css';
+import HeadingContainer from './HeadingContainer';
 const Form = () => {
   return (
     <section className="w-full min-h-[90vh] bg-dark-4">
@@ -12,12 +13,12 @@ const Form = () => {
         <div className="mt-5">
           <form action="#" method="POST">
             <div className="shadow overflow-hidden sm:rounded-md">
-              <div className="px-4 py-5 bg-white sm:p-6">
+              <div className="px-4 py-5 bg-dark-5 sm:p-6">
                 <div className="grid grid-cols-6 gap-6">
                   <div className="col-span-6 sm:col-span-3">
                     <label
                       htmlFor="first-name"
-                      className="block text-xl leading-none font-medium text-gray-700"
+                      className="block text-xl leading-none font-medium text-gray-200"
                     >
                       First name
                     </label>
@@ -26,14 +27,14 @@ const Form = () => {
                       name="first-name"
                       id="first-name"
                       autoComplete="given-name"
-                      className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-xl leading-none border-gray-300 rounded-md"
+                      className="mt-1 focus:ring-hero focus:border-hero bg-dark-4 block w-full shadow-sm sm:text-xl leading-none border-dark-2 text-gray-300 rounded-md"
                     />
                   </div>
 
                   <div className="col-span-6 sm:col-span-3">
                     <label
                       htmlFor="last-name"
-                      className="block text-xl leading-none font-medium text-gray-700"
+                      className="block text-xl leading-none font-medium text-gray-200"
                     >
                       Last name
                     </label>
@@ -42,14 +43,14 @@ const Form = () => {
                       name="last-name"
                       id="last-name"
                       autoComplete="family-name"
-                      className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-xl leading-none border-gray-300 rounded-md"
+                      className="mt-1 focus:ring-hero focus:border-hero bg-dark-4 block w-full shadow-sm sm:text-xl leading-none border-dark-2 text-gray-300 rounded-md"
                     />
                   </div>
 
                   <div className="col-span-6 sm:col-span-4">
                     <label
                       htmlFor="email-address"
-                      className="block text-xl leading-none font-medium text-gray-700"
+                      className="block text-xl leading-none font-medium text-gray-200"
                     >
                       Email address
                     </label>
@@ -58,104 +59,50 @@ const Form = () => {
                       name="email-address"
                       id="email-address"
                       autoComplete="email"
-                      className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-xl leading-none border-gray-300 rounded-md"
+                      className="mt-1 focus:ring-hero focus:border-hero bg-dark-4 block w-full shadow-sm sm:text-xl leading-none border-dark-2 text-gray-300 rounded-md"
                     />
                   </div>
-
-                  <div className="col-span-6 sm:col-span-3">
+                  <div className="col-span-6 sm:col-span-4">
                     <label
-                      htmlFor="country"
-                      className="block text-xl leading-none font-medium text-gray-700"
+                      htmlFor="message"
+                      className="block text-xl leading-none font-medium text-gray-200"
                     >
-                      Country
+                      Your message
                     </label>
-                    <select
-                      id="country"
-                      name="country"
-                      autoComplete="country-name"
-                      className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl leading-none"
-                    >
-                      <option>United States</option>
-                      <option>Canada</option>
-                      <option>Mexico</option>
-                    </select>
-                  </div>
-
-                  <div className="col-span-6">
-                    <label
-                      htmlFor="street-address"
-                      className="block text-xl leading-none font-medium text-gray-700"
-                    >
-                      Street address
-                    </label>
-                    <input
-                      type="text"
-                      name="street-address"
-                      id="street-address"
-                      autoComplete="street-address"
-                      className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-xl leading-none border-gray-300 rounded-md"
-                    />
-                  </div>
-
-                  <div className="col-span-6 sm:col-span-6 lg:col-span-2">
-                    <label
-                      htmlFor="city"
-                      className="block text-xl leading-none font-medium text-gray-700"
-                    >
-                      City
-                    </label>
-                    <input
-                      type="text"
-                      name="city"
-                      id="city"
-                      autoComplete="address-level2"
-                      className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-xl leading-none border-gray-300 rounded-md"
-                    />
-                  </div>
-
-                  <div className="col-span-6 sm:col-span-3 lg:col-span-2">
-                    <label
-                      htmlFor="region"
-                      className="block text-xl leading-none font-medium text-gray-700"
-                    >
-                      State / Province
-                    </label>
-                    <input
-                      type="text"
-                      name="region"
-                      id="region"
-                      autoComplete="address-level1"
-                      className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-xl leading-none border-gray-300 rounded-md"
-                    />
-                  </div>
-
-                  <div className="col-span-6 sm:col-span-3 lg:col-span-2">
-                    <label
-                      htmlFor="postal-code"
-                      className="block text-xl leading-none font-medium text-gray-700"
-                    >
-                      ZIP / Postal code
-                    </label>
-                    <input
-                      type="text"
-                      name="postal-code"
-                      id="postal-code"
-                      autoComplete="postal-code"
-                      className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-xl leading-none border-gray-300 rounded-md"
+                    <textarea
+                      name="message"
+                      id="message"
+                      autoComplete="email"
+                      className="mt-1 focus:ring-hero focus:border-hero bg-dark-4 block w-full shadow-sm sm:text-xl leading-none border-dark-2 text-gray-300 rounded-md"
                     />
                   </div>
                 </div>
               </div>
-              <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
+              <div className="px-4 py-3 bg-dark-3 text-right sm:px-6">
                 <button
                   type="submit"
-                  className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-xl leading-none font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className={`inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-xl leading-none font-medium rounded-md text-white bg-hero hover:bg-hero-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-hero ${styles.textShadow}`}
                 >
                   Save
                 </button>
               </div>
             </div>
           </form>
+        </div>
+        <div className="w-[86.3%] justify-self-end">
+          <HeadingContainer
+            big={'Have any more questions?'}
+            des={
+              'If you have any more questions regarding me or just want to provide feed, then you can simply reach me through the contact form beside. '
+            }
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/contact.svg"
+            draggable="false"
+            alt="contact"
+            className=" w-3/4"
+          />
         </div>
       </div>
     </section>
