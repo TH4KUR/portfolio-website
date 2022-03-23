@@ -15,7 +15,7 @@ import { useState } from 'react';
 const allData = [
   {
     github: {
-      stat: false,
+      stat: undefined,
     },
     cardData: {
       imageSrc: `bg-[url('/siis.png')]`,
@@ -76,42 +76,43 @@ const allData = [
 ];
 
 const Projects = () => {
-  const [initial, setInitial] = useState(true);
+  const [initial, setInitial] = useState(false);
   const [text, setText] = useState(<>Load More &rarr;</>);
   const testFunc = () => {
     setInitial(false);
-    setText(<>No More projects to show for now...</>);
-    console.log(text, initial);
+    setText(<>{`That's it for now`}</>);
   };
   return (
     <section className="w-full min-h-[86vh] bg-dark-5 grid">
-      <div className="w-[86.3%] pt-40 mx-auto grid grid-cols-2">
-        <HeadingContainer
-          small={'My Projects'}
-          big={
-            <>
-              Any fool can write <br /> code that a computer can understand.
-              <br /> Good programmers write code that <br /> humans can
-              understand.
-            </>
-          }
-          des={
-            "I understand that the best way to measure the understanding and experience of one's expertise in a language is by looking at the way he writes code. So here are some of my best projects so far."
-          }
-        >
-          <div className="flex">
-            <button
-              className={`${
-                initial ? 'text-hero hover:text-gray-50' : 'text-gray-50'
-              } transition-colors text-2xl border-b border-current pb-0 leading-none cursor-pointer`}
-              onClick={testFunc}
-              disabled={initial}
-            >
-              {text}
-            </button>
-          </div>
-        </HeadingContainer>
-        <div className="grid grid-cols-3 grid-rows-2 gap-3">
+      <div className="w-[86.3%] py-10 mx-auto grid grid-cols-2 items-center">
+        <div>
+          <HeadingContainer
+            small={'My Projects'}
+            big={
+              <>
+                Any fool can write <br /> code that a computer can understand.
+                <br /> Good programmers write code that <br /> humans can
+                understand.
+              </>
+            }
+            des={
+              "I understand that the best way to measure the understanding and experience of one's expertise in a language is by looking at the way he writes code. So here are some of my best projects so far."
+            }
+          >
+            <div className="flex">
+              <button
+                className={`${
+                  !initial ? 'text-hero hover:text-gray-50' : 'text-gray-100'
+                } transition-colors text-2xl border-b border-current pb-0 leading-none cursor-pointer`}
+                onClick={testFunc}
+                disabled={initial}
+              >
+                {text}
+              </button>
+            </div>
+          </HeadingContainer>
+        </div>
+        <div className="grid gap-3 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3">
           {allData.map((el, i) => (
             <Card key={i} data={el} />
           ))}
