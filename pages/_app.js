@@ -1,6 +1,6 @@
 import '../styles/globals.css';
-import Nav from '../components/Nav';
 import Head from 'next/head';
+// import Footer from '../components/Footer';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -8,8 +8,8 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <link rel="shortcut icon" href="/logo.svg" />
       </Head>
-      <Nav />
       <Component {...pageProps} />
+      {/* <Footer /> */}
     </>
   );
 }

@@ -8,15 +8,15 @@ const Faq = () => {
     {
       question: `Question goes here...`,
       ans: `Here goes an answer for the above question. No ideas for what
-      questions to add so im just leaving it as it is.`,
+      questions to add. Suggestion hi de dena aa hi gye ho toh through the form below.`,
     },
     {
-      question: `Question 2 goes here...`,
+      question: `Question 2 pls come here...`,
       ans: `Here goes an answer for the above question (2). No ideas for what
       questions to add so im just leaving it as it is.`,
     },
     {
-      question: `Question 3 goes here...`,
+      question: `Question 3 go there here...`,
       ans: `Here goes an answer for the above question (3). No ideas for what
       questions to add so im just leaving it as it is.`,
     },

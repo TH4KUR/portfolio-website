@@ -14,4 +14,6 @@ window.mobileCheck = function () {
   return check;
 };
 
-window.mobileCheck() ? (location.href = 'https://google.com') : null;
+window.mobileCheck()
+  ? (location.href = `${location.href.split('/')[0]}/mobile`)
+  : null;

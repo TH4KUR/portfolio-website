@@ -2,9 +2,11 @@ import React from 'react';
 import Heading from './Heading';
 import styles from '../styles/Form.module.css';
 import HeadingContainer from './HeadingContainer';
+import { IoConstructOutline } from 'react-icons/io5';
+
 const Form = () => {
   return (
-    <section className="w-full min-h-[90vh] bg-dark-4">
+    <section id="contact" className="w-full min-h-[90vh] bg-dark-4">
       <div className="w-[86.3%] pt-40 mx-auto grid grid-cols-2">
         <Heading text={'Contact Me'} big={false} />
       </div>
@@ -78,7 +80,11 @@ const Form = () => {
                   </div>
                 </div>
               </div>
-              <div className="px-4 py-3 bg-dark-3 text-right sm:px-6">
+              <div className="px-4 py-3 bg-dark-3 text-right sm:px-6 flex justify-between items-center">
+                <p className="flex text-xl text-hero-dark">
+                  <IoConstructOutline className="text-hero text-base self-center mr-2" />{' '}
+                  Form under construction. No worries it will be up soon ;)
+                </p>
                 <button
                   type="submit"
                   className={`inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-xl leading-none font-medium rounded-md text-white bg-hero hover:bg-hero-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-hero ${styles.textShadow}`}

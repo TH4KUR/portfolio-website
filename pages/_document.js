@@ -8,7 +8,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html className="scroll-smooth" style={{ scrollBehavior: 'smooth' }}>
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link

@@ -83,7 +83,7 @@ const Projects = () => {
     setText(<>{`That's it for now`}</>);
   };
   return (
-    <section className="w-full min-h-[86vh] bg-dark-5 grid">
+    <section id="projects" className="w-full min-h-[86vh] bg-dark-5 grid">
       <div className="w-[86.3%] py-10 mx-auto grid grid-cols-2 items-center">
         <div>
           <HeadingContainer

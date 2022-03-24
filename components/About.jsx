@@ -6,7 +6,10 @@ import HeadingContainer from './HeadingContainer';
 
 const About = () => {
   return (
-    <section className="w-full min-h-[85vh] py-5 bg-dark-5 grid place-content-center">
+    <section
+      id="about"
+      className="w-full min-h-[85vh] py-5 bg-dark-5 grid place-content-center"
+    >
       <div className="w-10/12 mx-auto grid grid-cols-2 items-center ">
         <HeadingContainer
           small={'About Me'}

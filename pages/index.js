@@ -5,7 +5,8 @@ import Technologies from '../components/Technologies';
 import Projects from '../components/Projects';
 import Form from '../components/Form';
 import Script from 'next/script';
-
+import Footer from '../components/Footer';
+import Nav from '../components/Nav';
 export default function Home() {
   return (
     <>
@@ -13,11 +14,14 @@ export default function Home() {
         <link rel="shortcut icon" href="/logo.svg" />
         <title>{`Home - Eashaan's Portfolio`}</title>
       </Head>
+
+      <Nav />
       <Hero />
       <About />
       <Technologies />
       <Projects />
       <Form />
+      <Footer />
       <Script src="../utils/redirect.js" strategy="beforeInteractive" />
     </>
   );
