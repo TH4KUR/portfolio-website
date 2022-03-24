@@ -44,7 +44,7 @@ const Footer = () => {
         </div>
       </div>
       <ul className="lg:h-3/4 lg:justify-self-end w-1/2">
-        <li className="font-medium mb-3 sm:mb-6 text-hero-dark text-xl text-xl">
+        <li className="font-medium mb-3 sm:mb-6 text-hero-dark text-xl">
           Quick Links
         </li>
         <li className="mb-2">
