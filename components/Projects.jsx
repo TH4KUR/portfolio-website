@@ -84,7 +84,7 @@ const Projects = () => {
   };
   return (
     <section id="projects" className="w-full min-h-[86vh] bg-dark-5 grid">
-      <div className="w-[86.3%] py-10 mx-auto grid grid-cols-2 items-center">
+      <div className="w-[86.3%] py-10 mx-auto grid lg:grid-cols-2 items-center">
         <div>
           <HeadingContainer
             small={'My Projects'}
@@ -112,7 +112,7 @@ const Projects = () => {
             </div>
           </HeadingContainer>
         </div>
-        <div className="grid gap-3 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3">
+        <div className="grid gap-3 sm:grid-cols-2 mt-6 sm:mt-0 2xl:grid-cols-3 md:w-10/12 lg:w-full">
           {allData.map((el, i) => (
             <Card key={i} data={el} />
           ))}

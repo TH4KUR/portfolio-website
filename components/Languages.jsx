@@ -21,7 +21,7 @@ import { useState } from 'react/cjs/react.development';
 
 export const Languages = ({ input }) => {
   return (
-    <div className="grid grid-cols-6 place-content-center">
+    <div className="grid sm:grid-cols-6 grid-cols-5 place-content-center">
       <div className={'language self-end'}>
         <SiHtml5 className=" text-orange-600 text-[2.5rem] mb-1" />
         <p>HTML</p>
@@ -49,7 +49,7 @@ export const Languages = ({ input }) => {
 
 export const Frameworks = () => {
   return (
-    <div className="grid grid-cols-6 grid-rows-2 place-content-center">
+    <div className="grid sm:grid-cols-6 grid-cols-4 grid-rows-2 place-content-center">
       <div className={'language'}>
         <Tag
           text={'Gaining XP'}

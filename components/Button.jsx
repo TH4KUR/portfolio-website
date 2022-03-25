@@ -1,12 +1,6 @@
-const Button = ({ text, color, hover, bg }) => {
+const Button = ({ text }) => {
   return (
-    <button
-      className={`drop-shadow ${
-        color
-          ? `text-${color} bg-${bg} hover:bg-${hover}`
-          : `text-white bg-hero hover:bg-hero-dark`
-      } btn`}
-    >
+    <button className={`drop-shadow text-white bg-hero hover:bg-hero-dark btn`}>
       {text}
     </button>
   );

@@ -22,8 +22,8 @@ const Faq = () => {
     },
   ]);
   return (
-    <div className="w-full px-4 pt-16">
-      <div className="w-full max-w-md p-2 mx-auto rounded-2xl bg-dark">
+    <div className="w-full lg:px-4 lg:pt-16 md:pt-2">
+      <div className="w-full max-w-md p-2 lg:mx-auto rounded-2xl bg-dark">
         {faq.map(({ question, ans }, i) => {
           return (
             <div key={i} className="mb-1">

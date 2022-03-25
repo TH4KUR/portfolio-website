@@ -4,8 +4,8 @@ import { Frameworks, Languages } from './Languages';
 
 const Technologies = () => {
   return (
-    <section className="min-h-[85vh] bg-dark-4 flex items-center">
-      <div className="w-10/12 grid grid-cols-2 items-center mx-auto my-auto">
+    <section className="min-h-[85vh] bg-dark-4 flex items-center py-10 sm:py-5">
+      <div className="w-10/12 grid lg:grid-cols-2 items-center mx-auto my-auto">
         <div className="h-full">
           <HeadingContainer
             small={'Technologies'}
@@ -17,7 +17,7 @@ const Technologies = () => {
             }
           />
         </div>
-        <div>
+        <div className="md:pt-3 lg:pt-0">
           <div className="mb-2">
             <Heading text={'Languages'} big={false} />
             <Languages />
