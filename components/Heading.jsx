@@ -6,7 +6,7 @@ const Heading = ({ children, text, big, c = '' }) => {
     </h2>
   ) : (
     <h1
-      className={`heading--big text-gray-50 leading-none mb-3 ${
+      className={`heading--big text-gray-50 leading-none mb-3 md:w-[26ch] ${
         'w-10/12' && c
       }`}
     >

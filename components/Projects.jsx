@@ -90,9 +90,8 @@ const Projects = () => {
             small={'My Projects'}
             big={
               <>
-                Any fool can write <br /> code that a computer can understand.
-                <br /> Good programmers write code that <br /> humans can
-                understand.
+                Any fool can write code that a computer can understand. <br />{' '}
+                Good programmers write code that humans can understand.
               </>
             }
             des={

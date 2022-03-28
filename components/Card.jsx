@@ -10,14 +10,21 @@ import { DiGithubBadge } from 'react-icons/di';
 import sendPing from '../utils/sendPing';
 
 const Card = ({ data }) => {
+  let failCount = 0;
   const { cardData, modalData, requestsData, github } = data;
+
+  // Project request status
   const [reqStatus, setReqStatus] = useState(false);
+
+  // Button text state
   const [buttonText, setButtonText] = useState('Check Demo Status');
+
+  // Modal
   let [isOpen, setIsOpen] = useState(false);
 
   const setStatus = (stat, msg = '') => {
     setReqStatus(stat);
-    setButtonText(requestsData[msg] || requestsData[stat]);
+    setButtonText(requestsData[msg] || msg || requestsData[stat]);
   };
   const clickHandler = async (e, url, stat) => {
     try {
@@ -41,6 +48,11 @@ const Card = ({ data }) => {
         return;
       }
     } catch (error) {
+      failCount++;
+      if (failCount > 2) {
+        setStatus('fail', 'There seems to be a server error');
+        return;
+      }
       setStatus('fail');
       setTimeout(() => {
         clickHandler(e, url, 'onfail');
@@ -139,13 +151,13 @@ const Card = ({ data }) => {
                       big={false}
                       c={{ marginBottom: 0 }}
                     />
-                    <div className="flex">
+                    <div className="flex flex-col md:flex-row place-items-start">
                       <a
                         className={`py-1 px-2 ${
                           (reqStatus === 'success' && 'text-emerald-500') ||
                           (reqStatus === 'fail' && 'text-red-500') ||
                           'text-pink-600'
-                        } text-xl bg-dark-4 rounded mr-2 flex items-center focus:border-none`}
+                        } text-xl bg-dark-4 rounded mr-2 mb-2 md:mb-0 flex items-center focus:border-none`}
                         style={{ textShadow: '1px 2px 6px #000000e1' }}
                         onClick={(e) => {
                           clickHandler(e, requestsData.url);

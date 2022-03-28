@@ -6,19 +6,16 @@ import { ChevronUpIcon } from '@heroicons/react/solid';
 const Faq = () => {
   const [faq, useFaq] = useState([
     {
-      question: `Question goes here...`,
-      ans: `Here goes an answer for the above question. No ideas for what
-      questions to add. Suggestion hi de dena aa hi gye ho toh through the form below.`,
+      question: `Why learn to code?`,
+      ans: `I started out in coding so that I could do something productive during lockdown and ended up loving it. Coding gives me very much creative freedom as I can build anything I want and nothing makes me happier than that.`,
     },
     {
-      question: `Question 2 pls come here...`,
-      ans: `Here goes an answer for the above question (2). No ideas for what
-      questions to add so im just leaving it as it is.`,
+      question: `Where does your inner drive come from?`,
+      ans: `Web development is a constantly changing field with new languages and frameworks popping up everyday. I like to learn more and more about new technologies as it is my passion, So my inner drive to build websites comes from my willingness to gain knowledge.`,
     },
     {
-      question: `Question 3 go there here...`,
-      ans: `Here goes an answer for the above question (3). No ideas for what
-      questions to add so im just leaving it as it is.`,
+      question: `What is your personal philosophy?`,
+      ans: `Here goes an answer for the above question. It is a bit philosophical so ill give it a thought before answering.`,
     },
   ]);
   return (

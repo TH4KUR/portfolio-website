@@ -35,7 +35,7 @@ const Form = () => {
                   <div className="col-span-6 sm:col-span-3">
                     <label
                       htmlFor="first-name"
-                      className="block text-xl leading-none font-medium text-gray-200"
+                      className="block text-2xl leading-none font-medium text-gray-200"
                     >
                       First name
                     </label>
@@ -45,7 +45,7 @@ const Form = () => {
                       name="first-name"
                       id="first-name"
                       autoComplete="given-name"
-                      className="mt-1 focus:ring-hero focus:border-hero bg-dark-4 block w-full shadow-sm sm:text-xl leading-none border-dark-2 text-gray-300 rounded-md"
+                      className="mt-1 focus:ring-hero focus:border-hero bg-dark-4 block w-full shadow-sm text-xl leading-none border-dark-2 text-gray-300 rounded-md"
                       value={'Eashaan'}
                     />
                   </div>
@@ -53,7 +53,7 @@ const Form = () => {
                   <div className="col-span-6 sm:col-span-3">
                     <label
                       htmlFor="last-name"
-                      className="block text-xl leading-none font-medium text-gray-200"
+                      className="block text-2xl leading-none font-medium text-gray-200"
                     >
                       Last name
                     </label>
@@ -63,7 +63,7 @@ const Form = () => {
                       name="last-name"
                       id="last-name"
                       autoComplete="family-name"
-                      className="mt-1 focus:ring-hero focus:border-hero bg-dark-4 block w-full shadow-sm sm:text-xl leading-none border-dark-2 text-gray-300 rounded-md"
+                      className="mt-1 focus:ring-hero focus:border-hero bg-dark-4 block w-full shadow-sm text-xl leading-none border-dark-2 text-gray-300 rounded-md"
                       value={'Thakur'}
                     />
                   </div>
@@ -71,7 +71,7 @@ const Form = () => {
                   <div className="col-span-6 sm:col-span-4">
                     <label
                       htmlFor="email-address"
-                      className="block text-xl leading-none font-medium text-gray-200"
+                      className="block text-2xl leading-none font-medium text-gray-200"
                     >
                       Email address
                     </label>
@@ -81,14 +81,14 @@ const Form = () => {
                       name="email-address"
                       id="email-address"
                       autoComplete="email"
-                      className="mt-1 focus:ring-hero focus:border-hero bg-dark-4 block w-full shadow-sm sm:text-xl leading-none border-dark-2 text-gray-300 rounded-md"
+                      className="mt-1 focus:ring-hero focus:border-hero bg-dark-4 block w-full shadow-sm text-xl leading-none border-dark-2 text-gray-300 rounded-md"
                       value={'max910payne@gmail.com'}
                     />
                   </div>
-                  <div className="col-span-6 sm:col-span-4">
+                  <div className="col-span-6 sm:col-span-5">
                     <label
                       htmlFor="message"
-                      className="block text-xl leading-none font-medium text-gray-200"
+                      className="block text-2xl leading-none font-medium text-gray-200"
                     >
                       Your message
                     </label>
@@ -96,10 +96,8 @@ const Form = () => {
                       name="message"
                       id="message"
                       autoComplete="email"
-                      className="mt-1 focus:ring-hero focus:border-hero bg-dark-4 block w-full shadow-sm sm:text-xl leading-none border-dark-2 text-gray-300 rounded-md resize-none"
-                      value={
-                        'Socha apni info hi likh deta hu form khali khali sa lag rha thha :p'
-                      }
+                      className="mt-1 focus:ring-hero focus:border-hero bg-dark-4 block w-full shadow-sm text-xl leading-none border-dark-2 text-gray-300 rounded-md resize-none h-[6.5rem] sm:h-[6rem]"
+                      value={`Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda unde vitae in beatae rerum officiis officia.`}
                       readOnly
                     />
                   </div>

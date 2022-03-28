@@ -28,7 +28,7 @@ const Hero = () => {
               big={
                 <>
                   Hello I am <br />
-                  Eashaan Thakur an aspiring web developer
+                  Eashaan Thakur a web developer
                 </>
               }
               links={[
@@ -40,7 +40,7 @@ const Hero = () => {
                 },
               ]}
               copy={true}
-              des="I am currently a high school student, learning new technologies in web development. I love building websites but I also play CTFs whenever i get the time. "
+              des="I am currently a high school student, learning new technologies in web development. I love building websites and am constantly trying out new ideas. "
             />
           </div>
         </div>

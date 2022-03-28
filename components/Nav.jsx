@@ -165,14 +165,6 @@ export default function Nav() {
                             <span className="text-hero">
                               Currently working on it,
                             </span>
-                            <a
-                              href="https://www.youtube.com/watch?v=KRz6N5E3nHU"
-                              className=" text-gray-200 underline underline-offset-2"
-                              target={'_blank'}
-                              rel="noreferrer"
-                            >
-                              Soory darling soory darling..... lol
-                            </a>
                           </div>
                         </Popover.Panel>
                       </Transition>

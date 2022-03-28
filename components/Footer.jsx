@@ -29,6 +29,8 @@ const Footer = () => {
           />
         </div>
       </div>
+      <ul className="lg:h-3/4 lg:justify-self-center"></ul>
+
       <ul className="lg:h-3/4 lg:justify-self-end w-1/2">
         <li className="font-medium mb-3 sm:mb-6 text-hero-dark text-xl">
           Quick Links
@@ -57,20 +59,11 @@ const Footer = () => {
       </ul>
       <ul className="lg:h-3/4 lg:justify-self-center">
         <li className="font-medium mb-3 sm:mb-6 text-hero-dark text-xl">
-          Address
-        </li>
-        <li className="text-gray-300 text-lg">
-          Address kyu chahiye mera 😡😡😡
-        </li>
-      </ul>
-      <ul className="lg:h-3/4 lg:justify-self-center">
-        <li className="font-medium mb-3 sm:mb-6 text-hero-dark text-xl">
           Contact Me
         </li>
         <li className="mb-2 text-gray-300 text-lg">
           Email: max910payne@gmail.com
         </li>
-        <li className="mb-2 text-gray-300 text-lg">Phone no:&nbsp; :(</li>
       </ul>
     </footer>
   );
