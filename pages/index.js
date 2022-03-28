@@ -18,8 +18,8 @@ export default function Home() {
       <Nav />
       <Hero />
       <About />
-      <Technologies />
       <Projects />
+      <Technologies />
       <Form />
       <Footer />
       <Script src="../utils/redirect.js" strategy="beforeInteractive" />

@@ -22,7 +22,7 @@ const Hero = () => {
           <Objects3d src="./objects/objects.html" />
         </div>
         <div className="flex items-center mx-auto w-11/12">
-          <div className="z-10 relative lg:before:hidden before:absolute before:h-full before:w-full before:bg-dark-4 before:opacity-[0.07] before:z-[5] before:top-0">
+          <div className="z-10 lg:before:hidden before:absolute before:h-[75vh] before:w-full before:bg-dark-4 before:opacity-[0.07] before:z-[5] before:top-0">
             <HeadingContainer
               small={'Web Developer'}
               big={

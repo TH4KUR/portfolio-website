@@ -78,7 +78,7 @@ const Card = ({ data }) => {
         <div className="flex flex-col justify-center">
           <div>
             <h5 className="text-gray-200 text-2xl">{cardData.title}</h5>
-            <p className="text-gray-400 text-xl leading-none">
+            <p className="text-gray-400 text-[1.35rem] leading-none">
               {cardData.shortDes}
             </p>
           </div>

@@ -4,7 +4,7 @@ import { Frameworks, Languages } from './Languages';
 
 const Technologies = () => {
   return (
-    <section className="min-h-[85vh] bg-dark-4 flex items-center py-10 sm:py-5">
+    <section className="min-h-[85vh] bg-dark-4 flex items-center py-10 sm:py-5 border-b-[1px] border-dark-2">
       <div className="w-10/12 grid lg:grid-cols-2 items-center mx-auto my-auto">
         <div className="h-full">
           <HeadingContainer
