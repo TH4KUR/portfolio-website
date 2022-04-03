@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Button from './Button';
+import Button from './HeroLink';
 import LinkStyled from './LinkStyled';
 
 const nav = [
@@ -135,7 +135,7 @@ export default function Nav() {
           </ul>
           <div>
             <div className="hidden sm:block">
-              <Button text="Portfolio" />
+              <HeroLink text="Portfolio" href='/portfolio' />
             </div>
             <div className="sm:hidden">
               <div className="w-full max-w-sm px-4">
