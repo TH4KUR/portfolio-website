@@ -33,10 +33,10 @@ const Hero = () => {
               }
               links={[
                 {
-                  text: 'E: max910payne@gmail.com',
+                  text: 'E: eashaan@th4kur.me',
                   href: '/',
                   copy: true,
-                  copyText: 'max910payne@gmail.com',
+                  copyText: 'eashaan@th4kur.me',
                 },
               ]}
               copy={true}
