@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Button from './HeroLink';
-import HeroLink from './ButtonStyled';
+import LinkStyled from './LinkStyled';
+import HeroLink from './HeroLink';
 
 const nav = [
   { name: 'Home', href: '/' },
