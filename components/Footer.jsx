@@ -62,7 +62,7 @@ const Footer = () => {
           Contact Me
         </li>
         <li className="mb-2 text-gray-300 text-lg">
-          Email: max910payne@gmail.com
+          Email: eashaan@th4kur.me
         </li>
       </ul>
     </footer>
