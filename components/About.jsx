@@ -25,7 +25,7 @@ const About = () => {
             }
           >
             <div className="flex">
-              <span className="mr-3 text-7xl text-hero self-start ">2+</span>
+              <span className="mr-3 text-7xl text-hero self-start ">4+</span>
               <p className="self-center text-xl leading-none text-gray-300 translate-y-[-5px]">
                 Years of <br /> Experience
               </p>
