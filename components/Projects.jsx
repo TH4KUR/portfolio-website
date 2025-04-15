@@ -9,10 +9,43 @@ import {
   SiExpress,
   SiMongodb,
   SiTailwindcss,
+  SiVercel,
 } from 'react-icons/si';
 import { useState } from 'react';
 
 const allData = [
+  {
+    github: {
+      stat: true,
+      link: 'https://github.com/th4kur/kritikmc',
+    },
+    cardData: {
+      imageSrc: `bg-[url('/kritikmc.jpeg')]`,
+      modalImg: `bg-[url('/kritikmc.jpeg')]`,
+      title: 'KRITI Website',
+      shortDes:
+        'I developed this website for KRITI, the Kakatiya Research Initiative for Transformative Innovations, affiliated with Kakatiya Medical College.',
+    },
+    modalData: {
+      title: 'KRITI Website',
+      des: 'I developed this website for KRITI, the Kakatiya Research Initiative for Transformative Innovations, affiliated with Kakatiya Medical College. The site showcases events, archives, and the Kakatiya Chronicles magazine, providing a platform for medical research and innovation.',
+      languages: [
+        <SiNextdotjs key={1} className="text-orange-600 text-[1.8rem] mr-2" />,
+        <SiTailwindcss key={2} className="text-cyan-400 text-3xl mr-2" />,
+        <SiVercel key={3} className="text-yellow-400 text-3xl mr-2" />,
+        <SiMongodb key={4} className="text-green-400 text-3xl mr-2" />,
+      ],
+    },
+    requestsData: {
+      finalUrl: 'https://www.kritikmc.com/',
+      url: 'https://proxy.eashaan.workers.dev/?url=https://www.kritikmc.com',
+      load: 'Checking website status',
+      success: 'Website is online',
+      fail: 'Website is offline',
+      onfail: 'Attempting to reconnect',
+      done: 'Visit Website',
+    },
+  },
   {
     github: {
       stat: undefined,

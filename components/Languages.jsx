@@ -14,6 +14,8 @@ import {
   SiExpress,
   SiMongodb,
   SiTailwindcss,
+  SiC,
+  SiCplusplus,
 } from 'react-icons/si';
 
 import Tag from './Tag';
@@ -42,6 +44,15 @@ export const Languages = ({ input }) => {
           icon={<GiBabyBottle key={Math.trunc(Math.random() * 100 + 1)} />}
         />
         <p>Python</p>
+      </div>
+      <div className={'language'}>
+        <SiCplusplus className=" text-blue-500 text-5xl " />
+        <Tag
+          text={'Beginner'}
+          bg={'bg-blue-900 text-gray-100'}
+          icon={<GiBabyBottle key={Math.trunc(Math.random() * 100 + 1)} />}
+        />
+        <p>C++</p>
       </div>
     </div>
   );

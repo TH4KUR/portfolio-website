@@ -27,8 +27,8 @@ const Form = () => {
             className=" w-3/4 lg:block hidden"
           />
         </div>
-        <div className="">
-          <form action="#" method="POST" onSubmit={(e) => e.preventDefault()}>
+        <div className="text-gray-100 text-4xl">
+          {/* <form action="#" method="POST" onSubmit={(e) => e.preventDefault()}>
             <div className="shadow overflow-hidden sm:rounded-md">
               <div className="px-4 py-5 bg-dark-5 sm:p-6">
                 <div className="grid grid-cols-6 gap-6">
@@ -118,7 +118,9 @@ const Form = () => {
                 </button>
               </div>
             </div>
-          </form>
+          </form> */}
+          Send me a mail at: <br />{' '}
+          <span className="text-3xl">eashaanthakur13[at]gmail[dot]com</span>
         </div>
       </div>
     </section>

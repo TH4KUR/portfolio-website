@@ -35,7 +35,6 @@ const Card = ({ data }) => {
 
         setStatus('load', status || 'load');
 
-
         const response =
           stat === 'onfail'
             ? await sendPing(url, { timeout: 15000 })
@@ -189,6 +188,8 @@ const Card = ({ data }) => {
                           github.stat ? '' : 'cursor-not-allowed with-info'
                         } relative`}
                         style={{ textShadow: '1px 2px 6px #000000e1' }}
+                        target="_blank"
+                        rel="noreferrer"
                       >
                         <DiGithubBadge className="mr-1 leading-none text-xl transform -translate-y-[2px]" />
                         {github.stat ? 'Source Code' : 'Not Permitted'}

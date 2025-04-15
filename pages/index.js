@@ -7,6 +7,8 @@ import Form from '../components/Form';
 import Script from 'next/script';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
+import Timeline from '../components/Timeline';
+import Analyser from '../components/Analyser';
 export default function Home() {
   return (
     <>
@@ -18,7 +20,9 @@ export default function Home() {
       <Nav />
       <Hero />
       <About />
+      <Timeline />
       <Projects />
+      <Analyser />
       <Technologies />
       <Form />
       <Footer />
