@@ -21,7 +21,7 @@ const Hero = () => {
   };
 
   return (
-    <header className="hero relative">
+    <header className="hero relative mt-16">
       {/* Loading GIF */}
       {isLoading && (
         <div className="absolute inset-0 bg-black flex items-center justify-center z-50">
